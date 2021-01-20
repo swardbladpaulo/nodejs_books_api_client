@@ -3,6 +3,7 @@ const displayBooks = async () => {
   const displayNode = document.getElementById('display')
   const data = await (await fetch(apiUrl + '/books')).json()
   data.books.forEach(book => {
+    debugger
     const displayBookNode = document.createElement('div')
     let html = `<p>${book.title} by: ${book.author}</p>`
     displayBookNode.innerHTML = html
