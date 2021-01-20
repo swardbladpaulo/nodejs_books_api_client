@@ -1,8 +1,9 @@
 
 const apiUrl = 'http://localhost:3000'
 const displayBooks = async () => {
-  const displayNode = document.getElementById('display')
+  // const displayNode = document.getElementById('display')
   const data = await (await fetch(apiUrl + '/books')).json()
+  debugger
   data.books.forEach(book => {
     displayBook(book)
     // const displayBookNode = document.createElement('div')
